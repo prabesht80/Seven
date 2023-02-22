@@ -42,7 +42,7 @@ namespace Seven.Controllers
             if (ModelState.IsValid)
             {
                 int userId;
-                if (new AppService().LoginData(loginData, out userId))
+                if (new AppService().Login(loginData))
                 {
                     //FormsAuthentication.RedirectFromLoginPage(userId.ToString(), loginData.RememberMe);
                     return RedirectToAction("Index");
